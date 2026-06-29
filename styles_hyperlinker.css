@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 24px 16px;
+    background: #1a1e24;
+    font-family: 'Courier New', 'IBM EGA', 'VT323', 'Courier', monospace;
+    font-size: 18px;
+    color: #222;
+}
+.app-container {
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    background: #fef7e0;
+    border: 3px solid #000000;
+    box-shadow: none;
+    font-size: 18px;
+}
+.window-title {
+    background: #cdc9b4;
+    padding: 12px 20px;
+    border-bottom: 3px solid #000000;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+.window-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    color: #000000;
+    margin: 0;
+    background: none;
+    padding: 0;
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+}
+.title-icon {
+    font-size: 22px;
+    font-weight: normal;
+    filter: none;
+    opacity: 0.8;
+}
+.app-content {
+    padding: 28px 32px 32px 32px;
+    background: #fef7e0;
+}
+.form-row {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.form-row label {
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 100px;
+    padding-top: 8px;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+    letter-spacing: -0.3px;
+}
+.form-row textarea {
+    flex: 1;
+    min-width: 260px;
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 20px;
+    padding: 12px 14px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+    resize: vertical;
+    min-height: 180px;
+    line-height: 1.5;
+    outline: none;
+    box-shadow: none;
+    font-weight: normal;
+}
+.form-row textarea:focus {
+    background: #fffef5;
+    border-color: #222;
+}
+.classic-button {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 28px;
+    background: #c0bcab;
+    border: 2px solid #000000;
+    color: #000000;
+    cursor: pointer;
+    min-width: 160px;
+    text-align: center;
+    transition: none;
+    letter-spacing: 0;
+}
+.classic-button:hover {
+    background: #b0ab96;
+    border-color: #000;
+}
+.classic-button:active {
+    background: #9e9882;
+    border-style: solid;
+    transform: none;
+    padding: 10px 28px;
+}
+.classic-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    background: #9e9882;
+}
+.output-label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    display: block;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+}
+.output-box {
+    background: #fffff0;
+    border: 2px solid #000000;
+    padding: 20px 24px;
+    min-height: 220px;
+    max-height: 500px;
+    overflow-y: auto;
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #111;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.output-box .word-clickable {
+    color: #a00020;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    padding: 0 2px;
+    background-color: transparent;
+    font-weight: bold;
+}
+.output-box .word-clickable:hover {
+    background: #ffecb3;
+    color: #000000;
+    text-decoration: underline;
+}
+.output-box .word-clickable.active-word {
+    background: #ffe080;
+    color: #000000;
+    outline: 2px solid #000;
+    outline-offset: 0px;
+    text-decoration: underline;
+}
+.status-bar {
+    background: #ddd6c0;
+    border-top: 2px solid #000000;
+    border-bottom: none;
+    padding: 12px 20px;
+    margin-top: 0;
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.help-note {
+    background: #e9e2ce;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding: 14px 20px;
+    border: 2px solid #000000;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111;
+}
+.help-note strong {
+    color: #000000;
+    font-weight: bold;
+}
+.help-note a {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.help-note a:hover {
+    background: #ffe0a3;
+}
+.popup-menu {
+    position: fixed;
+    display: none;
+    background: #f0ecd8;
+    border: 2px solid #000000;
+    box-shadow: none;
+    z-index: 10000;
+    min-width: 220px;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    padding: 6px 0;
+}
+.popup-menu.visible {
+    display: block;
+}
+.popup-menu .menu-item {
+    display: block;
+    padding: 8px 24px 8px 32px;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: normal;
+}
+.popup-menu .menu-item:hover {
+    background: #000000;
+    color: #f0ecd8;
+}
+.popup-menu .menu-item.menu-highlight {
+    background: #000000;
+    color: #f0ecd8;
+    outline: 1px solid #ffffa0;
+}
+.popup-menu .menu-divider {
+    height: 2px;
+    background: #5a5a4a;
+    margin: 8px 8px;
+}
+.popup-menu .menu-header {
+    padding: 6px 20px 4px;
+    font-weight: bold;
+    color: #000000;
+    background: #cdc6aa;
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+    cursor: default;
+}
+.output-box::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+}
+.output-box::-webkit-scrollbar-track {
+    background: #ddd6c0;
+    border: 1px solid #000000;
+}
+.output-box::-webkit-scrollbar-thumb {
+    background: #9e9882;
+    border: 1px solid #000;
+}
+.output-box::-webkit-scrollbar-button {
+    background: #c0bcab;
+    border: 1px solid #000;
+    height: 18px;
+}
+button, input, textarea, .output-box, .app-container, .popup-menu {
+    border-radius: 0px;
+    box-shadow: none;
+}
+@media (max-width: 700px) {
+    body {
+        font-size: 16px;
+        margin: 12px;
+    }
+    .form-row label {
+        font-size: 18px;
+        min-width: 80px;
+    }
+    .form-row textarea {
+        font-size: 18px;
+    }
+    .classic-button {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+    .output-box {
+        font-size: 18px;
+        padding: 16px;
+    }
+}

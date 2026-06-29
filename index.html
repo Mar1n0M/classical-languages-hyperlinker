@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Text Hyperlinker for Latin and Ancient Greek</title>
+        <link rel='stylesheet' href='styles_hyperlinker.css'>
+    </head>
+    <body>
+        <div class='app-container'>
+            <div class='window-title'>
+                <h2>Text Hyperlinker for Latin and Ancient Greek</h2>
+            </div>
+            <div class='app-content'>
+                <div class='form-row'>
+                    <label>▸ Language:</label>
+                    <div style='display: flex; gap: 24px; align-items: center; padding-top: 6px;'>
+                        <label style='display: flex; gap: 6px; font-weight: normal;'>
+                            <input type='radio' name='lang' id='lang-greek' value='greek' checked> Ancient Greek
+                        </label>
+                        <label style='display: flex; gap: 6px; font-weight: normal;'>
+                            <input type='radio' name='lang' id='lang-latin' value='latin'> Latin
+                        </label>
+                    </div>
+                </div>
+                <div class='form-row'>
+                    <label for='text-input'>▸ Your text:</label>
+                    <textarea id='text-input'></textarea>
+                </div>
+                <div class='form-row' style='justify-content: flex-end; margin-top: 6px;'>
+                    <button class='classic-button' id='btn-process'>Process</button>
+                </div>
+                <div class='output-label'>▸ Output:</div>
+                <div id='output-box' class='output-box'></div>
+                <div class='help-note'>
+                    <strong>You don't have a machine-readable text?</strong><br>Use <strong>Antigrapheus OCR</strong> (or another OCR program) to convert an image or a PDF file into digital text.<br>
+                    <strong>Step-by-step explanation:</strong><br>→ Open <a href='https://antigrapheus.com' target='_blank' rel='noopener noreferrer'>Antigrapheus</a><br>→ Load in your image/PDF<br>→ Start the OCR process<br>→ Copy the received text<br>→ Paste it here
+                </div>
+            </div>
+            <div class='status-bar' id='status-text'></div>
+        </div>
+        <div class='popup-menu' id='popup-menu' role='menu'>
+            <div class='menu-header' id='popup-word-display'>word</div>
+            <div class='menu-divider'></div>
+            <a class='menu-item' id='menu-perseus' href='#' target='_blank' role='menuitem'>Perseus morphological analysis</a>
+            <a class='menu-item' id='menu-logeion' href='#' target='_blank' role='menuitem'>Morpho (Logeion)</a>
+        </div>
+    </body>
+    <script src='script_hyperlinker.js'></script>
+</html>
