@@ -304,3 +304,18 @@ footer a:hover {
         padding: 16px;
     }
 }
+.lang-options {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding-top: 6px;
+}
+.lang-label {
+    display: flex;
+    gap: 6px;
+    font-weight: normal;
+}
+.button-row {
+    justify-content: flex-end;
+    margin-top: 6px;
+}
