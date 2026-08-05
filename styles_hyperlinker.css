@@ -52,7 +52,7 @@ body {
 .form-row {
     margin-bottom: 28px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -60,7 +60,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     min-width: 100px;
-    padding-top: 8px;
+    padding-top: 0;
     color: #000000;
     font-family: 'Courier New', monospace;
     letter-spacing: -0.3px;
@@ -308,7 +308,7 @@ footer a:hover {
     display: flex;
     gap: 24px;
     align-items: center;
-    padding-top: 6px;
+    padding-top: 0;
 }
 .lang-label {
     display: flex;
