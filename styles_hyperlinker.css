@@ -23,7 +23,7 @@ body {
 }
 .window-title {
     background: #cdc9b4;
-    padding: 12px 20px;
+    padding: 8px 14px;
     border-bottom: 3px solid #000000;
     display: flex;
     align-items: baseline;
@@ -48,21 +48,21 @@ body {
     opacity: 0.8;
 }
 .app-content {
-    padding: 32px 40px 40px 40px;
+    padding: 16px 20px 20px 20px;
     background: #fef7e0;
     min-height: calc(100vh - 106px);
 }
 .form-row {
-    margin-bottom: 32px;
+    margin-bottom: 18px;
     display: flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 .form-row label {
     font-weight: bold;
     font-size: 20px;
-    min-width: 100px;
+    min-width: 90px;
     padding-top: 0;
     color: #000000;
     font-family: 'Courier New', monospace;
@@ -121,8 +121,8 @@ body {
 .output-label {
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 14px;
-    margin-top: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
     display: block;
     color: #000000;
     font-family: 'Courier New', monospace;
@@ -179,9 +179,9 @@ body {
 }
 .help-note {
     background: #e9e2ce;
-    margin-top: 24px;
-    margin-bottom: 16px;
-    padding: 18px 24px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    padding: 12px 16px;
     border: 2px solid #000000;
     font-size: 16px;
     line-height: 1.5;
