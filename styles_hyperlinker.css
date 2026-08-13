@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    margin: 38px;
+    margin: 16px;
     background: #1a1e24;
     font-family: 'Courier New', 'IBM EGA', 'VT323', 'Courier', monospace;
     font-size: 18px;
@@ -14,7 +14,7 @@ body {
 .app-container {
     width: 100%;
     max-width: none;
-    min-height: calc(100vh - 76px);
+    min-height: calc(100vh - 32px);
     margin: 0;
     background: #fef7e0;
     border: 3px solid #000000;
@@ -50,7 +50,7 @@ body {
 .app-content {
     padding: 32px 40px 40px 40px;
     background: #fef7e0;
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 106px);
 }
 .form-row {
     margin-bottom: 32px;
