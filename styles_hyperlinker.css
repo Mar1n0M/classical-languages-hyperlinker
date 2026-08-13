@@ -265,10 +265,10 @@ button, input, textarea, .output-box, .app-container, .popup-menu {
 }
 footer {
     background: #fef7e0;
-    border: 2px solid #000000;
-    max-width: 1400px;
-    width: 95%;
-    margin: 24px auto 0 auto;
+    border: none;
+    border-top: 2px solid #000000;
+    width: 100%;
+    margin: 0;
     padding: 12px 20px;
     font-family: 'Courier New', monospace;
     font-size: 16px;
